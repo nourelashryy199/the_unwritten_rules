@@ -2,8 +2,9 @@
 import pytest
 from pydantic import ValidationError
 
-from unwritten_rules.domain.context import ContextAttribute
+from unwritten_rules.domain.context import ContextAttribute, ContextStatus
 from unwritten_rules.domain.experience import Experience
+from unwritten_rules.domain.evidence import Evidence, EvidenceType
 
 
 def test_create_experience_with_required_fields():
@@ -17,8 +18,7 @@ def test_create_experience_with_required_fields():
     )
     assert experience.country == "Egypt"
     assert experience.context == {}
-    assert experience.observation is None
-    assert experience.interpretation is None
+    assert experience.evidence == []  
 
 
 def test_create_experience_with_optional_context():
@@ -118,16 +118,20 @@ def test_experience_with_observation_and_interpretation():
     experience = Experience(
         narrative="My colleague did not respond to my greeting.",
         country="UK",
-        observation="My colleague walked past without speaking.",
-        interpretation="I thought they might be upset with me.",
+        evidence = [Evidence(
+            type = EvidenceType.OBSERVATION,
+            content = "My colleague walked past without speaking. ", 
+        ),
+        Evidence(
+            type = EvidenceType.INTERPRETATION,
+            content = "I thought they might be upset with me. ",
+        ),
+        ],
     )
+    assert len(experience.evidence) == 2
+    assert experience.evidence[0].type == EvidenceType.OBSERVATION
+    assert experience.evidence[1].type == EvidenceType.INTERPRETATION
 
-    assert experience.observation == (
-        "My colleague walked past without speaking."
-    )
-    assert experience.interpretation == (
-        "I thought they might be upset with me."
-    )
 
 def test_whitespace_only_narrative_is_rejected():
     with pytest.raises(ValidationError):
@@ -156,3 +160,170 @@ def test_whitespace_only_country_is_rejected():
             narrative="A social interaction.",
             country="   ",
         )
+
+def test_experience_with_evidence():
+    experience = Experience(
+        narrative=(
+            "I greeted my colleague, but she looked away. "
+            "I thought she was ignoring me."
+        ),
+        country="UK",
+        evidence=[
+            Evidence(
+                type=EvidenceType.OBSERVATION,
+                content="She looked away and did not respond.",
+            ),
+            Evidence(
+                type=EvidenceType.INTERPRETATION,
+                content="I thought she was deliberately ignoring me.",
+            ),
+            Evidence(
+                type=EvidenceType.UNKNOWN,
+                content="Why she did not respond.",
+            ),
+        ],
+    )
+
+    assert len(experience.evidence) == 3
+    assert experience.evidence[0].type == EvidenceType.OBSERVATION
+    assert experience.evidence[1].type == EvidenceType.INTERPRETATION
+    assert experience.evidence[2].type == EvidenceType.UNKNOWN
+
+
+def test_invalid_evidence_type_is_rejected():
+    with pytest.raises(ValidationError):
+        Evidence(
+            type="confirmed_fact",
+            content="She was deliberately ignoring me.",
+        )
+
+
+def test_whitespace_only_evidence_is_rejected():
+    with pytest.raises(ValidationError):
+        Evidence(
+            type=EvidenceType.OBSERVATION,
+            content="   ",
+        )
+
+
+def test_experiences_have_independent_evidence():
+    first = Experience(
+        narrative="First experience.",
+        country="Egypt",
+    )
+
+    second = Experience(
+        narrative="Second experience.",
+        country="UK",
+    )
+
+    first.evidence.append(
+        Evidence(
+            type=EvidenceType.OBSERVATION,
+            content="Someone left the room.",
+        )
+    )
+
+    assert second.evidence == []
+
+
+def test_known_context_attribute():
+    attribute = ContextAttribute(
+        value = "Family gathering"
+    )
+    assert attribute.status == ContextStatus.KNOWN
+    assert attribute.value == "Family gathering"
+
+def test_explicitly_unknwon_context_attribute():
+    attribute = ContextAttribute(
+        status = ContextStatus.UNKNOWN
+    )
+    assert attribute.status == ContextStatus.UNKNOWN
+    assert attribute.value is None
+
+def test_known_context_without_value_is_rejected():
+    with pytest.raises(ValidationError):
+        ContextAttribute(
+            status=ContextStatus.KNOWN
+        )
+
+
+def test_unknown_context_with_value_is_rejected():
+    with pytest.raises(ValidationError):
+        ContextAttribute(
+            status=ContextStatus.UNKNOWN,
+            value="Family gathering",
+        )
+
+
+def test_missing_context_differs_from_unknown_context():
+    experience = Experience(
+        narrative = "I declined a family invitation. ",
+        country = "Egypt", 
+        context = {
+            "previous_invitations": ContextAttribute(
+                status = ContextStatus.UNKNOWN
+            )
+        },
+    )
+    assert "previous_invitations" in experience.context
+    assert(
+        experience.context["previous_invitations"].status
+        == ContextStatus.UNKNOWN
+    )
+    assert "relationship_history" not in experience.context
+
+def test_context_can_reference_evidence():
+    experience = Experience(
+        narrative = "My manager raised their voice. ", 
+        country = "UK", 
+        evidence = [
+            Evidence(
+                id = "e1", 
+                type = EvidenceType.OBSERVATION, 
+                content = "My manager raised their voice. ",
+            ),
+        ],
+        context = {
+            "communication_style": ContextAttribute(
+                value = "Raised voice", 
+                evidence_ids = ["e1"],
+            ),
+        },
+    )
+    assert experience.context["communication_style"].evidence_ids == ["e1"]
+
+def test_context_cannot_reference_missing_evidence():
+    with pytest.raises(ValidationError):
+        Experience(
+            narrative = "My manager raised their voice. ", 
+            country = "UK", 
+            context = {
+                "communication_style": ContextAttribute(
+                    value = "Raised voice", 
+                    evidence_ids = ["nonexistent"],
+                ),
+            },
+        )
+
+def test_duplicate_evidence_ids_are_rejected():
+    with pytest.raises(ValidationError):
+        Experience(
+            narrative = "A social interaction. ", 
+            country = "Egypt", 
+            evidence = [
+                Evidence(
+                    id = "e1",
+                    type = EvidenceType.OBSERVATION,
+                    content = "Someone entered the room. ",
+                ),
+                Evidence(
+                    id = "e1", 
+                    type = EvidenceType.INTERPRETATION, 
+                    content = "I thought they were upset. ",
+                ),
+            ],
+        )
+
+
+
