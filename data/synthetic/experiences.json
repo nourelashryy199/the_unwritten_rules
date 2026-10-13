@@ -1,0 +1,442 @@
+[
+    {
+        "record_id": "SYN-001",
+        "record_type": "synthetic",
+        "pair_id": "PAIR-001",
+        "comparison_type": "same_behaviour_different_expectations",
+        "expectation_label": "Refusing an invitation requires an explanation",
+        "experience": {
+            "narrative": "A colleague invited me to dinner after work. I thanked her and said I couldn't attent, without giving a reason. She asked whether something was wrong and seemed uncomfortable when I repeated that I couldn't make it. ",
+            "country": "Egypt",
+            "context": {
+                "setting": {
+                    "status": "known",
+                    "value": "Workplace social invitation",
+                    "source": "contributor"
+                },
+                "relationship": {
+                    "status": "known",
+                    "value": "Colleagues",
+                    "source": "contributor"
+                }
+            },
+            "evidence" : [
+                {
+                    "id": "OBS-001",
+                    "type": "observation",
+                    "content": "The colleague asked whether something was wrong after the invitation was declined. "
+                },
+                {
+                    "id": "INT-001",
+                    "type": "interpretation",
+                    "content": "The contributor interpreted the colleague's response as discomfort with the unexplained refusal. "
+                }
+            ]
+        }
+    },
+
+    {
+    "record_id": "SYN-002",
+    "record_type": "synthetic",
+    "pair_id": "PAIR-001",
+    "comparison_type": "same_behaviour_different_expectations",
+    "expectation_label": "Declining an invitation does not require justification",
+    "experience": {
+        "narrative": "After a project meeting, a colleague invited me to dinner with the rest of the team. I thanked her and said I wouldn't be joining them. She smiled, said 'No problem, maybe next time,' and continued discussing the restaurant with the others. Nobody asked why I wasn't coming. I interpreted her response as an indication that declining the invitation was acceptable without explaining my reasons.",
+        "country": "United Kingdom",
+        "context": {
+        "setting": {
+            "status": "known",
+            "value": "Informal workplace dinner invitation",
+            "source": "contributor"
+        },
+        "relationship": {
+            "status": "known",
+            "value": "Colleagues working on the same project",
+            "source": "contributor"
+        }
+        },
+        "evidence": [
+        {
+            "id": "OBS-002",
+            "type": "observation",
+            "content": "The colleague accepted the refusal, suggested another occasion, and did not request an explanation."
+        },
+        {
+            "id": "INT-002",
+            "type": "interpretation",
+            "content": "The narrator interpreted the interaction as indicating that a refusal did not require justification."
+        }
+        ]
+    }
+    },
+
+    {
+    "record_id": "SYN-003",
+    "record_type": "synthetic",
+    "pair_id": "PAIR-002",
+    "comparison_type": "same_behaviour_different_expectations",
+    "expectation_label": "Silence during disagreement can preserve interpersonal harmony",
+    "experience": {
+        "narrative": "During a family dinner, my aunt and uncle disagreed about how to organise an upcoming celebration. When my uncle raised his voice, I stopped contributing to the discussion. Later, my aunt thanked me for not making the disagreement more confrontational. I interpreted her comment as appreciation for my decision to remain silent rather than escalate the argument.",
+        "country": "Japan",
+        "context": {
+        "setting": {
+            "status": "known",
+            "value": "Family dinner involving a disagreement",
+            "source": "contributor"
+        },
+        "relationship": {
+            "status": "known",
+            "value": "Extended family members",
+            "source": "contributor"
+        }
+        },
+        "evidence": [
+        {
+            "id": "OBS-003",
+            "type": "observation",
+            "content": "The narrator stopped contributing after the uncle raised his voice, and the aunt later thanked the narrator for avoiding confrontation."
+        },
+        {
+            "id": "INT-003",
+            "type": "interpretation",
+            "content": "The narrator interpreted the aunt's response as approval of silence as a way to prevent escalation."
+        }
+        ]
+    }
+    },
+    {
+    "record_id": "SYN-004",
+    "record_type": "synthetic",
+    "pair_id": "PAIR-002",
+    "comparison_type": "same_behaviour_different_expectations",
+    "expectation_label": "Silence during disagreement can be interpreted as disengagement",
+    "experience": {
+        "narrative": "My friend and I disagreed about a decision we had made together. When the conversation became tense, I stopped responding because I needed time to think. My friend asked whether I was deliberately ignoring her and said she felt I was shutting her out. I explained that I had gone quiet because I was overwhelmed. I interpreted her reaction as an expectation that I remain verbally engaged even during a difficult conversation.",
+        "country": "United Kingdom",
+        "context": {
+        "setting": {
+            "status": "known",
+            "value": "Private disagreement between friends",
+            "source": "contributor"
+        },
+        "relationship": {
+            "status": "known",
+            "value": "Close friends",
+            "source": "contributor"
+        }
+        },
+        "evidence": [
+        {
+            "id": "OBS-004",
+            "type": "observation",
+            "content": "The friend asked whether the narrator was ignoring her and said she felt shut out."
+        },
+        {
+            "id": "INT-004",
+            "type": "interpretation",
+            "content": "The narrator interpreted the friend's reaction as an expectation of continued verbal engagement during disagreement."
+        }
+        ]
+    }
+    },
+
+    {
+    "record_id": "SYN-005",
+    "record_type": "synthetic",
+    "pair_id": "PAIR-003",
+    "comparison_type": "same_behaviour_different_expectations",
+    "expectation_label": "A host should express hospitality by covering a guest's expenses",
+    "experience": {
+        "narrative": "A friend visiting my city for the first time joined me for lunch. When the bill arrived, I immediately offered to pay for both of us. She reached for her wallet, but I told her that she was my guest. She thanked me and accepted. I felt that covering the meal was part of welcoming her, rather than something I expected her to repay.",
+        "country": "Egypt",
+        "context": {
+        "setting": {
+            "status": "known",
+            "value": "Lunch with an out-of-town guest",
+            "source": "contributor"
+        },
+        "relationship": {
+            "status": "known",
+            "value": "Friends, one acting as host",
+            "source": "contributor"
+        }
+        },
+        "evidence": [
+        {
+            "id": "OBS-005",
+            "type": "observation",
+            "content": "The narrator offered to cover the entire bill, identified the friend as a guest, and the friend accepted."
+        },
+        {
+            "id": "INT-005",
+            "type": "interpretation",
+            "content": "The narrator understood paying as an expression of hospitality rather than an expectation of repayment."
+        }
+        ]
+    }
+    },
+    {
+    "record_id": "SYN-006",
+    "record_type": "synthetic",
+    "pair_id": "PAIR-003",
+    "comparison_type": "same_behaviour_different_expectations",
+    "expectation_label": "Paying for someone can establish an informal expectation of reciprocity",
+    "experience": {
+        "narrative": "After finishing a project together, I offered to pay for my colleague's lunch. She accepted and said she would get the next one. When we met again a week later, she insisted on paying and reminded me that I had covered our previous meal. I interpreted our exchange as a way of maintaining balance through alternating acts of generosity.",
+        "country": "Germany",
+        "context": {
+        "setting": {
+            "status": "known",
+            "value": "Lunch between colleagues after a completed project",
+            "source": "contributor"
+        },
+        "relationship": {
+            "status": "known",
+            "value": "Colleagues",
+            "source": "contributor"
+        }
+        },
+        "evidence": [
+        {
+            "id": "OBS-006",
+            "type": "observation",
+            "content": "The colleague promised to pay for the next lunch and subsequently did so."
+        },
+        {
+            "id": "INT-006",
+            "type": "interpretation",
+            "content": "The narrator interpreted the exchange as an informal practice of reciprocal generosity."
+        }
+        ]
+    }
+    },
+    {
+    "record_id": "SYN-007",
+    "record_type": "synthetic",
+    "pair_id": "PAIR-004",
+    "comparison_type": "same_behaviour_different_expectations",
+    "expectation_label": "Reducing direct eye contact can communicate deference to seniority",
+    "experience": {
+        "narrative": "During a meeting with a senior colleague, I listened carefully but avoided maintaining direct eye contact for long periods. Afterwards, another colleague commented that I had appeared particularly respectful and attentive. I explained that I had been conscious of the senior colleague's position and had deliberately kept my gaze less direct. I interpreted the comment as recognition of my attempt to show deference.",
+        "country": "South Korea",
+        "context": {
+        "setting": {
+            "status": "known",
+            "value": "Professional meeting with a senior colleague",
+            "source": "contributor"
+        },
+        "relationship": {
+            "status": "known",
+            "value": "Junior and senior colleagues",
+            "source": "contributor"
+        }
+        },
+        "evidence": [
+        {
+            "id": "OBS-007",
+            "type": "observation",
+            "content": "The narrator avoided sustained eye contact and another colleague described the behaviour as respectful."
+        },
+        {
+            "id": "INT-007",
+            "type": "interpretation",
+            "content": "The narrator associated reduced eye contact with showing respect for seniority."
+        }
+        ]
+    }
+    },
+    {
+    "record_id": "SYN-008",
+    "record_type": "synthetic",
+    "pair_id": "PAIR-004",
+    "comparison_type": "same_behaviour_different_expectations",
+    "expectation_label": "Avoiding eye contact can be interpreted as interpersonal discomfort",
+    "experience": {
+        "narrative": "I met a close friend for coffee after we had disagreed earlier in the week. While she talked, I repeatedly looked down at the table rather than meeting her eyes. She eventually asked whether I was uncomfortable being around her. I told her that I was still thinking about our disagreement. I interpreted her question as an indication that she associated my lack of eye contact with unresolved tension.",
+        "country": "Canada",
+        "context": {
+        "setting": {
+            "status": "known",
+            "value": "Private conversation at a café after a disagreement",
+            "source": "contributor"
+        },
+        "relationship": {
+            "status": "known",
+            "value": "Close friends",
+            "source": "contributor"
+        }
+        },
+        "evidence": [
+        {
+            "id": "OBS-008",
+            "type": "observation",
+            "content": "The narrator repeatedly looked down and the friend asked whether the narrator felt uncomfortable."
+        },
+        {
+            "id": "INT-008",
+            "type": "interpretation",
+            "content": "The narrator understood the friend's question as connecting reduced eye contact with interpersonal discomfort."
+        }
+        ]
+    }
+    },
+
+    {
+    "record_id": "SYN-009",
+    "record_type": "synthetic",
+    "pair_id": "PAIR-005",
+    "comparison_type": "different_behaviours_same_expectation",
+    "expectation_label": "Refusing an offering can be interpreted as rejecting the giver's care",
+    "experience": {
+        "narrative": "During a visit to my aunt's home, she offered me a plate of food she had prepared. I thanked her but declined because I had already eaten. She looked disappointed and asked whether I disliked her cooking. I reassured her that I appreciated the effort. I interpreted her reaction as concern that my refusal meant I did not value her hospitality.",
+        "country": "Egypt",
+        "context": {
+        "setting": {"status": "known", "value": "Family visit at a relative's home", "source": "contributor"},
+        "relationship": {"status": "known", "value": "Aunt and adult niece", "source": "contributor"}
+        },
+        "evidence": [
+        {"id": "OBS-009", "type": "observation", "content": "The aunt asked whether the narrator disliked her cooking after the food was declined."},
+        {"id": "INT-009", "type": "interpretation", "content": "The narrator interpreted the reaction as concern that the refusal communicated a lack of appreciation."}
+        ]
+    }
+    },
+    {
+    "record_id": "SYN-010",
+    "record_type": "synthetic",
+    "pair_id": "PAIR-005",
+    "comparison_type": "different_behaviours_same_expectation",
+    "expectation_label": "Refusing an offering can be interpreted as rejecting the giver's care",
+    "experience": {
+        "narrative": "A friend gave me a small handmade bracelet for my birthday. I told her it was thoughtful but said I could not accept it because I rarely wore jewellery. She became quiet and later told me she had spent several evenings making it. I realised that she might have understood my refusal as a rejection of the care she had put into the gift.",
+        "country": "France",
+        "context": {
+        "setting": {"status": "known", "value": "Birthday gift exchange", "source": "contributor"},
+        "relationship": {"status": "known", "value": "Close friends", "source": "contributor"}
+        },
+        "evidence": [
+        {"id": "OBS-010", "type": "observation", "content": "The friend became quiet after the gift was declined and later described the effort involved in making it."},
+        {"id": "INT-010", "type": "interpretation", "content": "The narrator considered whether declining the gift had been interpreted as rejecting the friend's care."}
+        ]
+    }
+    },
+    {
+    "record_id": "SYN-011",
+    "record_type": "synthetic",
+    "pair_id": "PAIR-006",
+    "comparison_type": "different_behaviours_same_expectation",
+    "expectation_label": "Making oneself available can be interpreted as evidence of relational commitment",
+    "experience": {
+        "narrative": "My friend sent me several messages about a difficult day, but I did not respond until the following evening because I had been overwhelmed with work. When I finally replied, she said she had felt unimportant to me. I explained that my delay was not intentional. I interpreted her reaction as connecting responsiveness with how much I valued our friendship.",
+        "country": "United Kingdom",
+        "context": {
+        "setting": {"status": "known", "value": "Private messaging during a stressful period", "source": "contributor"},
+        "relationship": {"status": "known", "value": "Close friends", "source": "contributor"}
+        },
+        "evidence": [
+        {"id": "OBS-011", "type": "observation", "content": "The friend said she felt unimportant after receiving a delayed reply."},
+        {"id": "INT-011", "type": "interpretation", "content": "The narrator interpreted the reaction as associating timely responses with friendship commitment."}
+        ]
+    }
+    },
+    {
+    "record_id": "SYN-012",
+    "record_type": "synthetic",
+    "pair_id": "PAIR-006",
+    "comparison_type": "different_behaviours_same_expectation",
+    "expectation_label": "Making oneself available can be interpreted as evidence of relational commitment",
+    "experience": {
+        "narrative": "I attended a friend's graduation celebration but left after an hour because I had an early shift the next morning. The following day, she told me she had hoped I would stay longer and that my early departure made her feel the occasion was not important to me. I explained my work schedule. I interpreted her disappointment as an expectation that close friends demonstrate support by making time for important events.",
+        "country": "Canada",
+        "context": {
+        "setting": {"status": "known", "value": "Graduation celebration", "source": "contributor"},
+        "relationship": {"status": "known", "value": "Close friends", "source": "contributor"}
+        },
+        "evidence": [
+        {"id": "OBS-012", "type": "observation", "content": "The friend said the narrator's early departure made the celebration seem unimportant."},
+        {"id": "INT-012", "type": "interpretation", "content": "The narrator interpreted staying at important events as one way of demonstrating relational commitment."}
+        ]
+    }
+    },
+    {
+    "record_id": "SYN-013",
+    "record_type": "synthetic",
+    "pair_id": "PAIR-007",
+    "comparison_type": "different_behaviours_same_expectation",
+    "expectation_label": "Respect for social hierarchy can be communicated through formal acknowledgment",
+    "experience": {
+        "narrative": "At my new workplace, I addressed a senior manager by her first name during a meeting. Afterwards, a colleague suggested that I use her professional title until she invited me to be less formal. I had intended to sound approachable, but I interpreted the advice as indicating that formal address was an expected acknowledgment of professional seniority.",
+        "country": "Germany",
+        "context": {
+        "setting": {"status": "known", "value": "Workplace meeting", "source": "contributor"},
+        "relationship": {"status": "known", "value": "Junior employee and senior manager", "source": "contributor"}
+        },
+        "evidence": [
+        {"id": "OBS-013", "type": "observation", "content": "A colleague advised the narrator to use the senior manager's professional title."},
+        {"id": "INT-013", "type": "interpretation", "content": "The narrator interpreted formal address as a way to acknowledge professional hierarchy."}
+        ]
+    }
+    },
+    {
+    "record_id": "SYN-014",
+    "record_type": "synthetic",
+    "pair_id": "PAIR-007",
+    "comparison_type": "different_behaviours_same_expectation",
+    "expectation_label": "Respect for social hierarchy can be communicated through formal acknowledgment",
+    "experience": {
+        "narrative": "During a departmental meeting, an older senior colleague entered the room while I remained seated. Afterwards, a coworker quietly explained that people in our team usually stood briefly when that colleague arrived. I had not intended any disrespect. I interpreted the coworker's advice as suggesting that standing was a recognised way of acknowledging seniority in that workplace.",
+        "country": "South Korea",
+        "context": {
+        "setting": {"status": "known", "value": "Departmental workplace meeting", "source": "contributor"},
+        "relationship": {"status": "known", "value": "Junior and senior colleagues", "source": "contributor"}
+        },
+        "evidence": [
+        {"id": "OBS-014", "type": "observation", "content": "A coworker explained that team members usually stood when the senior colleague entered."},
+        {"id": "INT-014", "type": "interpretation", "content": "The narrator interpreted standing as a formal acknowledgment of seniority."}
+        ]
+    }
+    },
+    {
+    "record_id": "SYN-015",
+    "record_type": "synthetic",
+    "pair_id": "PAIR-008",
+    "comparison_type": "different_behaviours_same_expectation",
+    "expectation_label": "Personal involvement can be understood as an expression of care",
+    "experience": {
+        "narrative": "At a family gathering, my uncle asked several questions about my job search, salary expectations, and future plans. I initially felt uncomfortable discussing these details. Later, he offered to introduce me to someone in his professional network. I began to interpret his questions as an attempt to understand my situation so he could help, although I still preferred to keep some details private.",
+        "country": "Egypt",
+        "context": {
+        "setting": {"status": "known", "value": "Extended family gathering", "source": "contributor"},
+        "relationship": {"status": "known", "value": "Uncle and adult niece", "source": "contributor"}
+        },
+        "evidence": [
+        {"id": "OBS-015", "type": "observation", "content": "The uncle asked detailed career questions and later offered a professional introduction."},
+        {"id": "INT-015", "type": "interpretation", "content": "The narrator considered the questions a possible expression of practical concern while maintaining a preference for privacy."}
+        ]
+    }
+    },
+    {
+    "record_id": "SYN-016",
+    "record_type": "synthetic",
+    "pair_id": "PAIR-008",
+    "comparison_type": "different_behaviours_same_expectation",
+    "expectation_label": "Personal involvement can be understood as an expression of care",
+    "experience": {
+        "narrative": "I mentioned to my older sister that I was having difficulty managing my university workload. Without being asked, she suggested a study schedule, recommended speaking to my tutor, and offered to review my assignments. I felt slightly overwhelmed by the advice because I had only wanted someone to listen. She later explained that offering solutions was how she tried to support me. I understood her intentions while recognising that her approach did not match what I needed.",
+        "country": "India",
+        "context": {
+        "setting": {"status": "known", "value": "Private conversation about university workload", "source": "contributor"},
+        "relationship": {"status": "known", "value": "Siblings", "source": "contributor"}
+        },
+        "evidence": [
+        {"id": "OBS-016", "type": "observation", "content": "The sister offered several practical suggestions without being asked and later explained that she intended to help."},
+        {"id": "INT-016", "type": "interpretation", "content": "The narrator interpreted the unsolicited advice as an attempted expression of care despite finding it overwhelming."}
+        ]
+    }
+    }
+
+
+
+
+]
