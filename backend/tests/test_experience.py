@@ -1,10 +1,13 @@
 
 import pytest
 from pydantic import ValidationError
+from datetime import datetime, timezone
+from uuid import UUID
 
 from unwritten_rules.domain.context import ContextAttribute, ContextStatus
 from unwritten_rules.domain.experience import Experience
 from unwritten_rules.domain.evidence import Evidence, EvidenceType
+from unwritten_rules.domain.moderation import ModerationStatus
 
 
 def test_create_experience_with_required_fields():
@@ -323,6 +326,55 @@ def test_duplicate_evidence_ids_are_rejected():
                     content = "I thought they were upset. ",
                 ),
             ],
+        )
+
+def test_experience_has_unique_identifier():
+    first = Experience(
+        narrative = "First experience. ", 
+        country = "Egypt",
+    )
+    second = Experience(
+        narrative = "Second experience. ",
+        country= "Egypt",
+    )
+    assert isinstance(first.id, UUID)
+    assert first.id != second.id
+
+def test_experience_has_timezone_aware_timestamps():
+    experience = Experience(
+        narrative = "A social interaction. ",
+        country = "Egypt",
+    )
+    assert isinstance(experience.created_at, datetime)
+    assert isinstance(experience.updated_at, datetime)
+
+    assert experience.created_at.tzinfo is not None
+    assert experience.updated_at.tzinfo is not None
+
+    assert experience.created_at.utcoffset().total_seconds() == 0
+    assert experience.updated_at.utcoffset().total_seconds() == 0
+
+def test_experience_defaults_to_pending_moderation():
+    experience = Experience(
+        narrative = "A social interaction. ", 
+        country = "Egypt",
+    )
+    assert experience.moderation_status == ModerationStatus.PENDING
+
+def test_experience_accepts_valida_moedration_status():
+    experience = Experience(
+        narrative = "A social interaction. ", 
+        country= "Egypt",
+        moderation_status=ModerationStatus.APPROVED
+    )
+    assert experience.moderation_status == ModerationStatus.APPROVED
+
+def test_invalid_moderation_status_is_rejected():
+    with pytest.raises(ValidationError):
+        Experience(
+            narrative = "A social interaction. ",
+            country= "Egypt",
+            moderation_status= "published",
         )
 
 
