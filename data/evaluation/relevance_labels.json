@@ -1,0 +1,132 @@
+
+{
+  "schema_version": "1.0",
+  "label_scale": {
+    "2": "Highly relevant",
+    "1": "Partially relevant",
+    "0": "Not relevant",
+    "null": "Insufficient information"
+  },
+  "judgments": [
+    {
+      "query_id": "Q-001",
+      "labels": {
+        "SYN-001": 2, "SYN-002": 0, "SYN-003": 0, "SYN-004": 0,
+        "SYN-005": 0, "SYN-006": 0, "SYN-007": 0, "SYN-008": 0,
+        "SYN-009": 1, "SYN-010": 1, "SYN-011": 0, "SYN-012": 0,
+        "SYN-013": 0, "SYN-014": 0, "SYN-015": 0, "SYN-016": 0
+      },
+      "rationale": "SYN-001 directly matches the expectation that refusal requires explanation. SYN-009 and SYN-010 concern related expectations surrounding refusal, but in different interpersonal situations."
+    },
+    {
+      "query_id": "Q-002",
+      "labels": {
+        "SYN-001": 0, "SYN-002": 0, "SYN-003": 2, "SYN-004": 0,
+        "SYN-005": 0, "SYN-006": 0, "SYN-007": 0, "SYN-008": 0,
+        "SYN-009": 0, "SYN-010": 0, "SYN-011": 0, "SYN-012": 0,
+        "SYN-013": 0, "SYN-014": 0, "SYN-015": 0, "SYN-016": 0
+      },
+      "rationale": "SYN-003 matches silence as a means of preventing escalation. SYN-004 involves similar behaviour but a different interpretation of silence."
+    },
+    {
+      "query_id": "Q-003",
+      "labels": {
+        "SYN-001": 0, "SYN-002": 0, "SYN-003": 0, "SYN-004": 0,
+        "SYN-005": 2, "SYN-006": 0, "SYN-007": 0, "SYN-008": 0,
+        "SYN-009": 0, "SYN-010": 0, "SYN-011": 0, "SYN-012": 0,
+        "SYN-013": 0, "SYN-014": 0, "SYN-015": 0, "SYN-016": 0
+      },
+      "rationale": "SYN-005 treats paying as hospitality without repayment. SYN-006 describes reciprocal generosity rather than the same expectation."
+    },
+    {
+      "query_id": "Q-004",
+      "labels": {
+        "SYN-001": 0, "SYN-002": 0, "SYN-003": 0, "SYN-004": 0,
+        "SYN-005": 0, "SYN-006": 0, "SYN-007": 2, "SYN-008": 0,
+        "SYN-009": 0, "SYN-010": 0, "SYN-011": 0, "SYN-012": 0,
+        "SYN-013": 1, "SYN-014": 1, "SYN-015": 0, "SYN-016": 0
+      },
+      "rationale": "SYN-007 directly matches reduced eye contact as deference. SYN-013 and SYN-014 involve related expectations about acknowledging hierarchy through different behaviours."
+    },
+    {
+      "query_id": "Q-005",
+      "labels": {
+        "SYN-001": 0, "SYN-002": 0, "SYN-003": 0, "SYN-004": 0,
+        "SYN-005": 0, "SYN-006": 0, "SYN-007": 0, "SYN-008": 0,
+        "SYN-009": 2, "SYN-010": 2, "SYN-011": 0, "SYN-012": 0,
+        "SYN-013": 0, "SYN-014": 0, "SYN-015": 0, "SYN-016": 0
+      },
+      "rationale": "Both SYN-009 and SYN-010 concern refusing an offering being interpreted as rejecting the giver's care, despite differences in what was offered."
+    },
+    {
+      "query_id": "Q-006",
+      "labels": {
+        "SYN-001": 0, "SYN-002": 0, "SYN-003": 0, "SYN-004": 0,
+        "SYN-005": 0, "SYN-006": 0, "SYN-007": 0, "SYN-008": 0,
+        "SYN-009": 0, "SYN-010": 0, "SYN-011": 2, "SYN-012": 2,
+        "SYN-013": 0, "SYN-014": 0, "SYN-015": 0, "SYN-016": 0
+      },
+      "rationale": "SYN-011 and SYN-012 both connect availability with relational commitment, despite involving messages and attendance at an event respectively."
+    },
+    {
+      "query_id": "Q-007",
+      "labels": {
+        "SYN-001": 0, "SYN-002": 0, "SYN-003": 0, "SYN-004": 0,
+        "SYN-005": 0, "SYN-006": 0, "SYN-007": 1, "SYN-008": 0,
+        "SYN-009": 0, "SYN-010": 0, "SYN-011": 0, "SYN-012": 0,
+        "SYN-013": 2, "SYN-014": 2, "SYN-015": 0, "SYN-016": 0
+      },
+      "rationale": "SYN-013 and SYN-014 directly concern workplace customs acknowledging seniority. SYN-007 concerns a related expectation expressed through eye contact."
+    },
+    {
+      "query_id": "Q-008",
+      "labels": {
+        "SYN-001": 0, "SYN-002": 0, "SYN-003": 0, "SYN-004": 0,
+        "SYN-005": 0, "SYN-006": 0, "SYN-007": 0, "SYN-008": 0,
+        "SYN-009": 0, "SYN-010": 0, "SYN-011": 0, "SYN-012": 0,
+        "SYN-013": 0, "SYN-014": 0, "SYN-015": 2, "SYN-016": 2
+      },
+      "rationale": "SYN-015 and SYN-016 both concern unsolicited personal involvement interpreted as an expression of care, even when the recipient experiences discomfort."
+    },
+    {
+      "query_id": "Q-009",
+      "labels": {
+        "SYN-001": 0, "SYN-002": 2, "SYN-003": 0, "SYN-004": 0,
+        "SYN-005": 0, "SYN-006": 0, "SYN-007": 0, "SYN-008": 0,
+        "SYN-009": 0, "SYN-010": 0, "SYN-011": 0, "SYN-012": 0,
+        "SYN-013": 0, "SYN-014": 0, "SYN-015": 0, "SYN-016": 0
+      },
+      "rationale": "SYN-002 matches acceptance of refusal without justification. SYN-001 is a hard negative because a similar refusal produces a different social expectation."
+    },
+    {
+      "query_id": "Q-010",
+      "labels": {
+        "SYN-001": 0, "SYN-002": 0, "SYN-003": 0, "SYN-004": 2,
+        "SYN-005": 0, "SYN-006": 0, "SYN-007": 0, "SYN-008": 0,
+        "SYN-009": 0, "SYN-010": 0, "SYN-011": 0, "SYN-012": 0,
+        "SYN-013": 0, "SYN-014": 0, "SYN-015": 0, "SYN-016": 0
+      },
+      "rationale": "SYN-004 directly matches silence interpreted as disengagement between close friends. SYN-003 is a hard negative because silence is interpreted as preventing escalation."
+    },
+    {
+      "query_id": "Q-011",
+      "labels": {
+        "SYN-001": null, "SYN-002": null, "SYN-003": 0, "SYN-004": 0,
+        "SYN-005": 0, "SYN-006": 0, "SYN-007": 0, "SYN-008": 0,
+        "SYN-009": 0, "SYN-010": 0, "SYN-011": 0, "SYN-012": 0,
+        "SYN-013": 0, "SYN-014": 0, "SYN-015": 0, "SYN-016": 0
+      },
+      "rationale": "The query omits the reaction and relationship context necessary to distinguish SYN-001 from SYN-002. Neither should automatically be treated as relevant or irrelevant."
+    },
+    {
+      "query_id": "Q-012",
+      "labels": {
+        "SYN-001": 0, "SYN-002": 0, "SYN-003": 0, "SYN-004": 0,
+        "SYN-005": 0, "SYN-006": 0, "SYN-007": null, "SYN-008": null,
+        "SYN-009": 0, "SYN-010": 0, "SYN-011": 0, "SYN-012": 0,
+        "SYN-013": 0, "SYN-014": 0, "SYN-015": 0, "SYN-016": 0
+      },
+      "rationale": "The query does not establish whether reduced eye contact communicates deference or interpersonal discomfort. Both interpretations remain plausible."
+    }
+  ]
+}

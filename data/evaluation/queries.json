@@ -1,0 +1,123 @@
+
+[
+  {
+    "query_id": "Q-001",
+    "query": "I declined a colleague's dinner invitation without explaining why, and they seemed uncomfortable with my refusal.",
+    "query_type": "similar_wording_different_expectations",
+    "context": {
+      "setting": "Workplace social invitation",
+      "relationship": "Colleagues",
+      "country": "Egypt"
+    }
+  },
+  {
+    "query_id": "Q-002",
+    "query": "I stayed silent during a family disagreement to avoid making things worse, and someone appreciated my restraint.",
+    "query_type": "similar_wording_different_expectations",
+    "context": {
+      "setting": "Family disagreement",
+      "relationship": "Extended family",
+      "country": "Japan"
+    }
+  },
+  {
+    "query_id": "Q-003",
+    "query": "I paid for someone's lunch because I considered them my guest, not because I expected anything in return.",
+    "query_type": "similar_wording_different_expectations",
+    "context": {
+      "setting": "Lunch with a guest",
+      "relationship": "Friends",
+      "country": "Egypt"
+    }
+  },
+  {
+    "query_id": "Q-004",
+    "query": "I avoided prolonged eye contact with a senior colleague to demonstrate respect.",
+    "query_type": "similar_wording_different_expectations",
+    "context": {
+      "setting": "Professional meeting",
+      "relationship": "Junior and senior colleagues",
+      "country": "South Korea"
+    }
+  },
+  {
+    "query_id": "Q-005",
+    "query": "Someone refused something I had prepared with care, and I felt that my affection was being rejected.",
+    "query_type": "different_wording_same_expectation",
+    "context": {
+      "setting": null,
+      "relationship": null,
+      "country": null
+    }
+  },
+  {
+    "query_id": "Q-006",
+    "query": "A person close to me felt unimportant because I couldn't make enough time for them.",
+    "query_type": "different_wording_same_expectation",
+    "context": {
+      "setting": null,
+      "relationship": "Close friends",
+      "country": null
+    }
+  },
+  {
+    "query_id": "Q-007",
+    "query": "I unintentionally failed to follow a workplace custom that acknowledges someone's higher position.",
+    "query_type": "different_wording_same_expectation",
+    "context": {
+      "setting": "Workplace",
+      "relationship": "Junior and senior colleagues",
+      "country": null
+    }
+  },
+  {
+    "query_id": "Q-008",
+    "query": "A relative became involved in my personal difficulties by offering practical assistance, even though I hadn't requested it.",
+    "query_type": "different_wording_same_expectation",
+    "context": {
+      "setting": "Personal difficulties",
+      "relationship": "Family members",
+      "country": null
+    }
+  },
+  {
+    "query_id": "Q-009",
+    "query": "I declined a dinner invitation without providing a reason, and the other person accepted my decision without questioning it.",
+    "query_type": "context_sensitive",
+    "context": {
+      "setting": "Informal workplace dinner",
+      "relationship": "Colleagues",
+      "country": "United Kingdom"
+    }
+  },
+  {
+    "query_id": "Q-010",
+    "query": "I became quiet during a difficult conversation with a close friend, who felt that I was shutting them out.",
+    "query_type": "context_sensitive",
+    "context": {
+      "setting": "Private disagreement",
+      "relationship": "Close friends",
+      "country": "United Kingdom"
+    }
+  },
+  {
+    "query_id": "Q-011",
+    "query": "Someone declined an invitation, but I don't know how the other person reacted or what their relationship was.",
+    "query_type": "ambiguous",
+    "context": {
+      "setting": null,
+      "relationship": null,
+      "country": null
+    }
+  },
+  {
+    "query_id": "Q-012",
+    "query": "Someone avoided looking directly at another person during a conversation, but I don't know why.",
+    "query_type": "ambiguous",
+    "context": {
+      "setting": null,
+      "relationship": null,
+      "country": null
+    }
+  }
+]
