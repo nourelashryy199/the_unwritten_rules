@@ -13,7 +13,7 @@ class SentenceTransformerAdapter:
 
         self._model = SentenceTransformer(model_name)
 
-        dimensions = self._model.get_sentence_embedding_dimension()
+        dimensions = self._model.get_embedding_dimension()
 
         if dimensions is None or dimensions <= 0:
             raise ValueError(

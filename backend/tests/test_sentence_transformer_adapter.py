@@ -11,7 +11,7 @@ from unwritten_rules.infrastructure.embeddings.sentence_transformer import (
 @pytest.fixture
 def mock_model():
     model = MagicMock()
-    model.get_sentence_embedding_dimension.return_value = 3
+    model.get_embedding_dimension.return_value = 3
 
     model.encode.return_value.tolist.return_value = [
         [0.1, 0.2, 0.3],
@@ -92,7 +92,7 @@ def test_adapter_rejects_blank_text(mock_model):
 
 
 def test_adapter_rejects_invalid_dimensions(mock_model):
-    mock_model.get_sentence_embedding_dimension.return_value = None
+    mock_model.get_embedding_dimension.return_value = None
 
     with patch(
         "unwritten_rules.infrastructure.embeddings.sentence_transformer.SentenceTransformer",
