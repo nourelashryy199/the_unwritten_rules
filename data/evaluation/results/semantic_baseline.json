@@ -1,0 +1,1638 @@
+{
+  "evaluation_name": "semantic_retrieval_baseline",
+  "settings": {
+    "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+    "embedding_dimensions": 384,
+    "batch_size": 32,
+    "similarity": "cosine",
+    "candidate_count": 16,
+    "query_count": 12,
+    "k_values": [
+      1,
+      3,
+      5,
+      10
+    ],
+    "relevant_label": 2,
+    "partial_relevance_policy": "not counted as relevant",
+    "uncertain_policy": "condensed ranking; excluded from scoring",
+    "unscorable_query_policy": "excluded from aggregate metrics"
+  },
+  "aggregate": {
+    "mean_recall_at_1": 0.55,
+    "mean_recall_at_3": 1.0,
+    "mean_recall_at_5": 1.0,
+    "mean_recall_at_10": 1.0,
+    "mrr": 0.85,
+    "scored_queries": 10,
+    "unscorable_queries": 2
+  },
+  "per_query": [
+    {
+      "query_id": "Q-001",
+      "query_type": "similar_wording_different_expectations",
+      "query": "I declined a colleague's dinner invitation without explaining why, and they seemed uncomfortable with my refusal.",
+      "evaluation": {
+        "status": "scored",
+        "recall": {
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0
+        },
+        "reciprocal_rank": 0.5,
+        "relevant_count": 1,
+        "uncertain_count": 0,
+        "original_ranking": [
+          "SYN-002",
+          "SYN-001",
+          "SYN-009",
+          "SYN-006",
+          "SYN-005",
+          "SYN-003",
+          "SYN-010",
+          "SYN-007",
+          "SYN-008",
+          "SYN-004",
+          "SYN-012",
+          "SYN-011",
+          "SYN-013",
+          "SYN-016",
+          "SYN-014",
+          "SYN-015"
+        ],
+        "assessable_ranking": [
+          "SYN-002",
+          "SYN-001",
+          "SYN-009",
+          "SYN-006",
+          "SYN-005",
+          "SYN-003",
+          "SYN-010",
+          "SYN-007",
+          "SYN-008",
+          "SYN-004",
+          "SYN-012",
+          "SYN-011",
+          "SYN-013",
+          "SYN-016",
+          "SYN-014",
+          "SYN-015"
+        ]
+      },
+      "retrieved": [
+        {
+          "record_id": "SYN-002",
+          "similarity_score": 0.8185380270006701,
+          "rank": 1
+        },
+        {
+          "record_id": "SYN-001",
+          "similarity_score": 0.6496578522473507,
+          "rank": 2
+        },
+        {
+          "record_id": "SYN-009",
+          "similarity_score": 0.5502088846086974,
+          "rank": 3
+        },
+        {
+          "record_id": "SYN-006",
+          "similarity_score": 0.4743523828119762,
+          "rank": 4
+        },
+        {
+          "record_id": "SYN-005",
+          "similarity_score": 0.46961992902362576,
+          "rank": 5
+        },
+        {
+          "record_id": "SYN-003",
+          "similarity_score": 0.46916183835135755,
+          "rank": 6
+        },
+        {
+          "record_id": "SYN-010",
+          "similarity_score": 0.4448775615307247,
+          "rank": 7
+        },
+        {
+          "record_id": "SYN-007",
+          "similarity_score": 0.4100746608634753,
+          "rank": 8
+        },
+        {
+          "record_id": "SYN-008",
+          "similarity_score": 0.40614069219536053,
+          "rank": 9
+        },
+        {
+          "record_id": "SYN-004",
+          "similarity_score": 0.3681345757360693,
+          "rank": 10
+        },
+        {
+          "record_id": "SYN-012",
+          "similarity_score": 0.3255700692186941,
+          "rank": 11
+        },
+        {
+          "record_id": "SYN-011",
+          "similarity_score": 0.32465852907888276,
+          "rank": 12
+        },
+        {
+          "record_id": "SYN-013",
+          "similarity_score": 0.30700745974414445,
+          "rank": 13
+        },
+        {
+          "record_id": "SYN-016",
+          "similarity_score": 0.30287370328060065,
+          "rank": 14
+        },
+        {
+          "record_id": "SYN-014",
+          "similarity_score": 0.25235677536178713,
+          "rank": 15
+        },
+        {
+          "record_id": "SYN-015",
+          "similarity_score": 0.2499116787763751,
+          "rank": 16
+        }
+      ]
+    },
+    {
+      "query_id": "Q-002",
+      "query_type": "similar_wording_different_expectations",
+      "query": "I stayed silent during a family disagreement to avoid making things worse, and someone appreciated my restraint.",
+      "evaluation": {
+        "status": "scored",
+        "recall": {
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "relevant_count": 1,
+        "uncertain_count": 0,
+        "original_ranking": [
+          "SYN-003",
+          "SYN-004",
+          "SYN-001",
+          "SYN-008",
+          "SYN-009",
+          "SYN-007",
+          "SYN-014",
+          "SYN-011",
+          "SYN-002",
+          "SYN-012",
+          "SYN-015",
+          "SYN-006",
+          "SYN-005",
+          "SYN-016",
+          "SYN-010",
+          "SYN-013"
+        ],
+        "assessable_ranking": [
+          "SYN-003",
+          "SYN-004",
+          "SYN-001",
+          "SYN-008",
+          "SYN-009",
+          "SYN-007",
+          "SYN-014",
+          "SYN-011",
+          "SYN-002",
+          "SYN-012",
+          "SYN-015",
+          "SYN-006",
+          "SYN-005",
+          "SYN-016",
+          "SYN-010",
+          "SYN-013"
+        ]
+      },
+      "retrieved": [
+        {
+          "record_id": "SYN-003",
+          "similarity_score": 0.577432823912178,
+          "rank": 1
+        },
+        {
+          "record_id": "SYN-004",
+          "similarity_score": 0.492180714980604,
+          "rank": 2
+        },
+        {
+          "record_id": "SYN-001",
+          "similarity_score": 0.393312712571868,
+          "rank": 3
+        },
+        {
+          "record_id": "SYN-008",
+          "similarity_score": 0.3913684339504789,
+          "rank": 4
+        },
+        {
+          "record_id": "SYN-009",
+          "similarity_score": 0.376477851041509,
+          "rank": 5
+        },
+        {
+          "record_id": "SYN-007",
+          "similarity_score": 0.36894020072142136,
+          "rank": 6
+        },
+        {
+          "record_id": "SYN-014",
+          "similarity_score": 0.32836319865306424,
+          "rank": 7
+        },
+        {
+          "record_id": "SYN-011",
+          "similarity_score": 0.3216869015253265,
+          "rank": 8
+        },
+        {
+          "record_id": "SYN-002",
+          "similarity_score": 0.3141916052842093,
+          "rank": 9
+        },
+        {
+          "record_id": "SYN-012",
+          "similarity_score": 0.2596339990554215,
+          "rank": 10
+        },
+        {
+          "record_id": "SYN-015",
+          "similarity_score": 0.2530323331543979,
+          "rank": 11
+        },
+        {
+          "record_id": "SYN-006",
+          "similarity_score": 0.23109439577957128,
+          "rank": 12
+        },
+        {
+          "record_id": "SYN-005",
+          "similarity_score": 0.2144978622810865,
+          "rank": 13
+        },
+        {
+          "record_id": "SYN-016",
+          "similarity_score": 0.21133424086466795,
+          "rank": 14
+        },
+        {
+          "record_id": "SYN-010",
+          "similarity_score": 0.18943774770013452,
+          "rank": 15
+        },
+        {
+          "record_id": "SYN-013",
+          "similarity_score": 0.1856789058218483,
+          "rank": 16
+        }
+      ]
+    },
+    {
+      "query_id": "Q-003",
+      "query_type": "similar_wording_different_expectations",
+      "query": "I paid for someone's lunch because I considered them my guest, not because I expected anything in return.",
+      "evaluation": {
+        "status": "scored",
+        "recall": {
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0
+        },
+        "reciprocal_rank": 0.5,
+        "relevant_count": 1,
+        "uncertain_count": 0,
+        "original_ranking": [
+          "SYN-006",
+          "SYN-005",
+          "SYN-002",
+          "SYN-001",
+          "SYN-009",
+          "SYN-003",
+          "SYN-010",
+          "SYN-012",
+          "SYN-014",
+          "SYN-007",
+          "SYN-013",
+          "SYN-015",
+          "SYN-016",
+          "SYN-008",
+          "SYN-011",
+          "SYN-004"
+        ],
+        "assessable_ranking": [
+          "SYN-006",
+          "SYN-005",
+          "SYN-002",
+          "SYN-001",
+          "SYN-009",
+          "SYN-003",
+          "SYN-010",
+          "SYN-012",
+          "SYN-014",
+          "SYN-007",
+          "SYN-013",
+          "SYN-015",
+          "SYN-016",
+          "SYN-008",
+          "SYN-011",
+          "SYN-004"
+        ]
+      },
+      "retrieved": [
+        {
+          "record_id": "SYN-006",
+          "similarity_score": 0.6188243311803979,
+          "rank": 1
+        },
+        {
+          "record_id": "SYN-005",
+          "similarity_score": 0.5737907301984382,
+          "rank": 2
+        },
+        {
+          "record_id": "SYN-002",
+          "similarity_score": 0.4896725231799167,
+          "rank": 3
+        },
+        {
+          "record_id": "SYN-001",
+          "similarity_score": 0.4215714156978996,
+          "rank": 4
+        },
+        {
+          "record_id": "SYN-009",
+          "similarity_score": 0.41004814644016496,
+          "rank": 5
+        },
+        {
+          "record_id": "SYN-003",
+          "similarity_score": 0.3057037245232073,
+          "rank": 6
+        },
+        {
+          "record_id": "SYN-010",
+          "similarity_score": 0.2774814849903134,
+          "rank": 7
+        },
+        {
+          "record_id": "SYN-012",
+          "similarity_score": 0.26843105423706726,
+          "rank": 8
+        },
+        {
+          "record_id": "SYN-014",
+          "similarity_score": 0.2094639061735643,
+          "rank": 9
+        },
+        {
+          "record_id": "SYN-007",
+          "similarity_score": 0.19732077384253455,
+          "rank": 10
+        },
+        {
+          "record_id": "SYN-013",
+          "similarity_score": 0.18660275173124577,
+          "rank": 11
+        },
+        {
+          "record_id": "SYN-015",
+          "similarity_score": 0.18578154325270865,
+          "rank": 12
+        },
+        {
+          "record_id": "SYN-016",
+          "similarity_score": 0.18161896682876932,
+          "rank": 13
+        },
+        {
+          "record_id": "SYN-008",
+          "similarity_score": 0.15534713092688687,
+          "rank": 14
+        },
+        {
+          "record_id": "SYN-011",
+          "similarity_score": 0.14633998527906686,
+          "rank": 15
+        },
+        {
+          "record_id": "SYN-004",
+          "similarity_score": 0.10345161763659311,
+          "rank": 16
+        }
+      ]
+    },
+    {
+      "query_id": "Q-004",
+      "query_type": "similar_wording_different_expectations",
+      "query": "I avoided prolonged eye contact with a senior colleague to demonstrate respect.",
+      "evaluation": {
+        "status": "scored",
+        "recall": {
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "relevant_count": 1,
+        "uncertain_count": 0,
+        "original_ranking": [
+          "SYN-007",
+          "SYN-014",
+          "SYN-001",
+          "SYN-008",
+          "SYN-002",
+          "SYN-013",
+          "SYN-009",
+          "SYN-016",
+          "SYN-003",
+          "SYN-011",
+          "SYN-004",
+          "SYN-006",
+          "SYN-010",
+          "SYN-005",
+          "SYN-015",
+          "SYN-012"
+        ],
+        "assessable_ranking": [
+          "SYN-007",
+          "SYN-014",
+          "SYN-001",
+          "SYN-008",
+          "SYN-002",
+          "SYN-013",
+          "SYN-009",
+          "SYN-016",
+          "SYN-003",
+          "SYN-011",
+          "SYN-004",
+          "SYN-006",
+          "SYN-010",
+          "SYN-005",
+          "SYN-015",
+          "SYN-012"
+        ]
+      },
+      "retrieved": [
+        {
+          "record_id": "SYN-007",
+          "similarity_score": 0.6432941113423946,
+          "rank": 1
+        },
+        {
+          "record_id": "SYN-014",
+          "similarity_score": 0.5098316115582693,
+          "rank": 2
+        },
+        {
+          "record_id": "SYN-001",
+          "similarity_score": 0.4777973830025343,
+          "rank": 3
+        },
+        {
+          "record_id": "SYN-008",
+          "similarity_score": 0.4291644964295196,
+          "rank": 4
+        },
+        {
+          "record_id": "SYN-002",
+          "similarity_score": 0.424157980676583,
+          "rank": 5
+        },
+        {
+          "record_id": "SYN-013",
+          "similarity_score": 0.40999867308752047,
+          "rank": 6
+        },
+        {
+          "record_id": "SYN-009",
+          "similarity_score": 0.31136228031263735,
+          "rank": 7
+        },
+        {
+          "record_id": "SYN-016",
+          "similarity_score": 0.3009997930555289,
+          "rank": 8
+        },
+        {
+          "record_id": "SYN-003",
+          "similarity_score": 0.298874687785678,
+          "rank": 9
+        },
+        {
+          "record_id": "SYN-011",
+          "similarity_score": 0.2970380713336633,
+          "rank": 10
+        },
+        {
+          "record_id": "SYN-004",
+          "similarity_score": 0.28123047120399375,
+          "rank": 11
+        },
+        {
+          "record_id": "SYN-006",
+          "similarity_score": 0.2681943968818486,
+          "rank": 12
+        },
+        {
+          "record_id": "SYN-010",
+          "similarity_score": 0.22979408066496784,
+          "rank": 13
+        },
+        {
+          "record_id": "SYN-005",
+          "similarity_score": 0.22923405915744505,
+          "rank": 14
+        },
+        {
+          "record_id": "SYN-015",
+          "similarity_score": 0.22192670543082252,
+          "rank": 15
+        },
+        {
+          "record_id": "SYN-012",
+          "similarity_score": 0.18918650048857855,
+          "rank": 16
+        }
+      ]
+    },
+    {
+      "query_id": "Q-005",
+      "query_type": "different_wording_same_expectation",
+      "query": "Someone refused something I had prepared with care, and I felt that my affection was being rejected.",
+      "evaluation": {
+        "status": "scored",
+        "recall": {
+          "recall_at_1": 0.5,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "relevant_count": 2,
+        "uncertain_count": 0,
+        "original_ranking": [
+          "SYN-009",
+          "SYN-001",
+          "SYN-010",
+          "SYN-002",
+          "SYN-008",
+          "SYN-005",
+          "SYN-004",
+          "SYN-011",
+          "SYN-007",
+          "SYN-003",
+          "SYN-012",
+          "SYN-006",
+          "SYN-016",
+          "SYN-015",
+          "SYN-013",
+          "SYN-014"
+        ],
+        "assessable_ranking": [
+          "SYN-009",
+          "SYN-001",
+          "SYN-010",
+          "SYN-002",
+          "SYN-008",
+          "SYN-005",
+          "SYN-004",
+          "SYN-011",
+          "SYN-007",
+          "SYN-003",
+          "SYN-012",
+          "SYN-006",
+          "SYN-016",
+          "SYN-015",
+          "SYN-013",
+          "SYN-014"
+        ]
+      },
+      "retrieved": [
+        {
+          "record_id": "SYN-009",
+          "similarity_score": 0.48040720641206436,
+          "rank": 1
+        },
+        {
+          "record_id": "SYN-001",
+          "similarity_score": 0.4398709239549781,
+          "rank": 2
+        },
+        {
+          "record_id": "SYN-010",
+          "similarity_score": 0.431348367686092,
+          "rank": 3
+        },
+        {
+          "record_id": "SYN-002",
+          "similarity_score": 0.43010316689591793,
+          "rank": 4
+        },
+        {
+          "record_id": "SYN-008",
+          "similarity_score": 0.35872334927070265,
+          "rank": 5
+        },
+        {
+          "record_id": "SYN-005",
+          "similarity_score": 0.35493838105658343,
+          "rank": 6
+        },
+        {
+          "record_id": "SYN-004",
+          "similarity_score": 0.3540412388099788,
+          "rank": 7
+        },
+        {
+          "record_id": "SYN-011",
+          "similarity_score": 0.3116866385382355,
+          "rank": 8
+        },
+        {
+          "record_id": "SYN-007",
+          "similarity_score": 0.30178567054535355,
+          "rank": 9
+        },
+        {
+          "record_id": "SYN-003",
+          "similarity_score": 0.2982001669961322,
+          "rank": 10
+        },
+        {
+          "record_id": "SYN-012",
+          "similarity_score": 0.2929695407936104,
+          "rank": 11
+        },
+        {
+          "record_id": "SYN-006",
+          "similarity_score": 0.28610262968361844,
+          "rank": 12
+        },
+        {
+          "record_id": "SYN-016",
+          "similarity_score": 0.22022075577971406,
+          "rank": 13
+        },
+        {
+          "record_id": "SYN-015",
+          "similarity_score": 0.21451538123090994,
+          "rank": 14
+        },
+        {
+          "record_id": "SYN-013",
+          "similarity_score": 0.1745663668918982,
+          "rank": 15
+        },
+        {
+          "record_id": "SYN-014",
+          "similarity_score": 0.1663179387966417,
+          "rank": 16
+        }
+      ]
+    },
+    {
+      "query_id": "Q-006",
+      "query_type": "different_wording_same_expectation",
+      "query": "A person close to me felt unimportant because I couldn't make enough time for them.",
+      "evaluation": {
+        "status": "scored",
+        "recall": {
+          "recall_at_1": 0.5,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "relevant_count": 2,
+        "uncertain_count": 0,
+        "original_ranking": [
+          "SYN-011",
+          "SYN-001",
+          "SYN-012",
+          "SYN-008",
+          "SYN-004",
+          "SYN-005",
+          "SYN-002",
+          "SYN-009",
+          "SYN-007",
+          "SYN-010",
+          "SYN-006",
+          "SYN-003",
+          "SYN-016",
+          "SYN-015",
+          "SYN-014",
+          "SYN-013"
+        ],
+        "assessable_ranking": [
+          "SYN-011",
+          "SYN-001",
+          "SYN-012",
+          "SYN-008",
+          "SYN-004",
+          "SYN-005",
+          "SYN-002",
+          "SYN-009",
+          "SYN-007",
+          "SYN-010",
+          "SYN-006",
+          "SYN-003",
+          "SYN-016",
+          "SYN-015",
+          "SYN-014",
+          "SYN-013"
+        ]
+      },
+      "retrieved": [
+        {
+          "record_id": "SYN-011",
+          "similarity_score": 0.5118372857164903,
+          "rank": 1
+        },
+        {
+          "record_id": "SYN-001",
+          "similarity_score": 0.433259047799486,
+          "rank": 2
+        },
+        {
+          "record_id": "SYN-012",
+          "similarity_score": 0.4306446493833889,
+          "rank": 3
+        },
+        {
+          "record_id": "SYN-008",
+          "similarity_score": 0.4093915502303716,
+          "rank": 4
+        },
+        {
+          "record_id": "SYN-004",
+          "similarity_score": 0.36308687887186414,
+          "rank": 5
+        },
+        {
+          "record_id": "SYN-005",
+          "similarity_score": 0.36218499137209076,
+          "rank": 6
+        },
+        {
+          "record_id": "SYN-002",
+          "similarity_score": 0.3276123097662817,
+          "rank": 7
+        },
+        {
+          "record_id": "SYN-009",
+          "similarity_score": 0.32631209413644624,
+          "rank": 8
+        },
+        {
+          "record_id": "SYN-007",
+          "similarity_score": 0.2975780939287331,
+          "rank": 9
+        },
+        {
+          "record_id": "SYN-010",
+          "similarity_score": 0.2963328470227486,
+          "rank": 10
+        },
+        {
+          "record_id": "SYN-006",
+          "similarity_score": 0.25833971446328696,
+          "rank": 11
+        },
+        {
+          "record_id": "SYN-003",
+          "similarity_score": 0.23633346603256675,
+          "rank": 12
+        },
+        {
+          "record_id": "SYN-016",
+          "similarity_score": 0.23627362236912253,
+          "rank": 13
+        },
+        {
+          "record_id": "SYN-015",
+          "similarity_score": 0.2125166516033761,
+          "rank": 14
+        },
+        {
+          "record_id": "SYN-014",
+          "similarity_score": 0.1731197438981334,
+          "rank": 15
+        },
+        {
+          "record_id": "SYN-013",
+          "similarity_score": 0.10578641484666414,
+          "rank": 16
+        }
+      ]
+    },
+    {
+      "query_id": "Q-007",
+      "query_type": "different_wording_same_expectation",
+      "query": "I unintentionally failed to follow a workplace custom that acknowledges someone's higher position.",
+      "evaluation": {
+        "status": "scored",
+        "recall": {
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0
+        },
+        "reciprocal_rank": 0.5,
+        "relevant_count": 2,
+        "uncertain_count": 0,
+        "original_ranking": [
+          "SYN-001",
+          "SYN-013",
+          "SYN-014",
+          "SYN-007",
+          "SYN-002",
+          "SYN-006",
+          "SYN-015",
+          "SYN-012",
+          "SYN-009",
+          "SYN-003",
+          "SYN-011",
+          "SYN-008",
+          "SYN-010",
+          "SYN-016",
+          "SYN-005",
+          "SYN-004"
+        ],
+        "assessable_ranking": [
+          "SYN-001",
+          "SYN-013",
+          "SYN-014",
+          "SYN-007",
+          "SYN-002",
+          "SYN-006",
+          "SYN-015",
+          "SYN-012",
+          "SYN-009",
+          "SYN-003",
+          "SYN-011",
+          "SYN-008",
+          "SYN-010",
+          "SYN-016",
+          "SYN-005",
+          "SYN-004"
+        ]
+      },
+      "retrieved": [
+        {
+          "record_id": "SYN-001",
+          "similarity_score": 0.4097053744197448,
+          "rank": 1
+        },
+        {
+          "record_id": "SYN-013",
+          "similarity_score": 0.3937875275854825,
+          "rank": 2
+        },
+        {
+          "record_id": "SYN-014",
+          "similarity_score": 0.32955952083532114,
+          "rank": 3
+        },
+        {
+          "record_id": "SYN-007",
+          "similarity_score": 0.3130132993993306,
+          "rank": 4
+        },
+        {
+          "record_id": "SYN-002",
+          "similarity_score": 0.2807530682153668,
+          "rank": 5
+        },
+        {
+          "record_id": "SYN-006",
+          "similarity_score": 0.2557257706854478,
+          "rank": 6
+        },
+        {
+          "record_id": "SYN-015",
+          "similarity_score": 0.2210498934069523,
+          "rank": 7
+        },
+        {
+          "record_id": "SYN-012",
+          "similarity_score": 0.21400612159626153,
+          "rank": 8
+        },
+        {
+          "record_id": "SYN-009",
+          "similarity_score": 0.20682551559077136,
+          "rank": 9
+        },
+        {
+          "record_id": "SYN-003",
+          "similarity_score": 0.19306647660815934,
+          "rank": 10
+        },
+        {
+          "record_id": "SYN-011",
+          "similarity_score": 0.1886534802016445,
+          "rank": 11
+        },
+        {
+          "record_id": "SYN-008",
+          "similarity_score": 0.18079207144971454,
+          "rank": 12
+        },
+        {
+          "record_id": "SYN-010",
+          "similarity_score": 0.17776983438690142,
+          "rank": 13
+        },
+        {
+          "record_id": "SYN-016",
+          "similarity_score": 0.15406180562799013,
+          "rank": 14
+        },
+        {
+          "record_id": "SYN-005",
+          "similarity_score": 0.14925579600067496,
+          "rank": 15
+        },
+        {
+          "record_id": "SYN-004",
+          "similarity_score": 0.11977356733417555,
+          "rank": 16
+        }
+      ]
+    },
+    {
+      "query_id": "Q-008",
+      "query_type": "different_wording_same_expectation",
+      "query": "A relative became involved in my personal difficulties by offering practical assistance, even though I hadn't requested it.",
+      "evaluation": {
+        "status": "scored",
+        "recall": {
+          "recall_at_1": 0.5,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "relevant_count": 2,
+        "uncertain_count": 0,
+        "original_ranking": [
+          "SYN-016",
+          "SYN-009",
+          "SYN-015",
+          "SYN-001",
+          "SYN-010",
+          "SYN-002",
+          "SYN-003",
+          "SYN-011",
+          "SYN-006",
+          "SYN-008",
+          "SYN-007",
+          "SYN-005",
+          "SYN-012",
+          "SYN-004",
+          "SYN-013",
+          "SYN-014"
+        ],
+        "assessable_ranking": [
+          "SYN-016",
+          "SYN-009",
+          "SYN-015",
+          "SYN-001",
+          "SYN-010",
+          "SYN-002",
+          "SYN-003",
+          "SYN-011",
+          "SYN-006",
+          "SYN-008",
+          "SYN-007",
+          "SYN-005",
+          "SYN-012",
+          "SYN-004",
+          "SYN-013",
+          "SYN-014"
+        ]
+      },
+      "retrieved": [
+        {
+          "record_id": "SYN-016",
+          "similarity_score": 0.47175507103983166,
+          "rank": 1
+        },
+        {
+          "record_id": "SYN-009",
+          "similarity_score": 0.4069511644323774,
+          "rank": 2
+        },
+        {
+          "record_id": "SYN-015",
+          "similarity_score": 0.3994166245023101,
+          "rank": 3
+        },
+        {
+          "record_id": "SYN-001",
+          "similarity_score": 0.39089224382331234,
+          "rank": 4
+        },
+        {
+          "record_id": "SYN-010",
+          "similarity_score": 0.31397929693334214,
+          "rank": 5
+        },
+        {
+          "record_id": "SYN-002",
+          "similarity_score": 0.3106746289943848,
+          "rank": 6
+        },
+        {
+          "record_id": "SYN-003",
+          "similarity_score": 0.3023427597333037,
+          "rank": 7
+        },
+        {
+          "record_id": "SYN-011",
+          "similarity_score": 0.30159972599843243,
+          "rank": 8
+        },
+        {
+          "record_id": "SYN-006",
+          "similarity_score": 0.2914745740208409,
+          "rank": 9
+        },
+        {
+          "record_id": "SYN-008",
+          "similarity_score": 0.2740314835174706,
+          "rank": 10
+        },
+        {
+          "record_id": "SYN-007",
+          "similarity_score": 0.2513387185786366,
+          "rank": 11
+        },
+        {
+          "record_id": "SYN-005",
+          "similarity_score": 0.2504241659348651,
+          "rank": 12
+        },
+        {
+          "record_id": "SYN-012",
+          "similarity_score": 0.19757252551434473,
+          "rank": 13
+        },
+        {
+          "record_id": "SYN-004",
+          "similarity_score": 0.19514312140132345,
+          "rank": 14
+        },
+        {
+          "record_id": "SYN-013",
+          "similarity_score": 0.17515832676494056,
+          "rank": 15
+        },
+        {
+          "record_id": "SYN-014",
+          "similarity_score": 0.15454141455969692,
+          "rank": 16
+        }
+      ]
+    },
+    {
+      "query_id": "Q-009",
+      "query_type": "context_sensitive",
+      "query": "I declined a dinner invitation without providing a reason, and the other person accepted my decision without questioning it.",
+      "evaluation": {
+        "status": "scored",
+        "recall": {
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "relevant_count": 1,
+        "uncertain_count": 0,
+        "original_ranking": [
+          "SYN-002",
+          "SYN-001",
+          "SYN-009",
+          "SYN-003",
+          "SYN-005",
+          "SYN-008",
+          "SYN-010",
+          "SYN-004",
+          "SYN-006",
+          "SYN-011",
+          "SYN-007",
+          "SYN-012",
+          "SYN-013",
+          "SYN-016",
+          "SYN-015",
+          "SYN-014"
+        ],
+        "assessable_ranking": [
+          "SYN-002",
+          "SYN-001",
+          "SYN-009",
+          "SYN-003",
+          "SYN-005",
+          "SYN-008",
+          "SYN-010",
+          "SYN-004",
+          "SYN-006",
+          "SYN-011",
+          "SYN-007",
+          "SYN-012",
+          "SYN-013",
+          "SYN-016",
+          "SYN-015",
+          "SYN-014"
+        ]
+      },
+      "retrieved": [
+        {
+          "record_id": "SYN-002",
+          "similarity_score": 0.7539213972543946,
+          "rank": 1
+        },
+        {
+          "record_id": "SYN-001",
+          "similarity_score": 0.5566914329431931,
+          "rank": 2
+        },
+        {
+          "record_id": "SYN-009",
+          "similarity_score": 0.5354136879393615,
+          "rank": 3
+        },
+        {
+          "record_id": "SYN-003",
+          "similarity_score": 0.4986170317425799,
+          "rank": 4
+        },
+        {
+          "record_id": "SYN-005",
+          "similarity_score": 0.4636421853253769,
+          "rank": 5
+        },
+        {
+          "record_id": "SYN-008",
+          "similarity_score": 0.4331902480834082,
+          "rank": 6
+        },
+        {
+          "record_id": "SYN-010",
+          "similarity_score": 0.43090582148891354,
+          "rank": 7
+        },
+        {
+          "record_id": "SYN-004",
+          "similarity_score": 0.4270855484581217,
+          "rank": 8
+        },
+        {
+          "record_id": "SYN-006",
+          "similarity_score": 0.42085054031743996,
+          "rank": 9
+        },
+        {
+          "record_id": "SYN-011",
+          "similarity_score": 0.3304622659642612,
+          "rank": 10
+        },
+        {
+          "record_id": "SYN-007",
+          "similarity_score": 0.32635566671554295,
+          "rank": 11
+        },
+        {
+          "record_id": "SYN-012",
+          "similarity_score": 0.30905080275852187,
+          "rank": 12
+        },
+        {
+          "record_id": "SYN-013",
+          "similarity_score": 0.28372686154674615,
+          "rank": 13
+        },
+        {
+          "record_id": "SYN-016",
+          "similarity_score": 0.2635052049695823,
+          "rank": 14
+        },
+        {
+          "record_id": "SYN-015",
+          "similarity_score": 0.24106069105139735,
+          "rank": 15
+        },
+        {
+          "record_id": "SYN-014",
+          "similarity_score": 0.1819494550703527,
+          "rank": 16
+        }
+      ]
+    },
+    {
+      "query_id": "Q-010",
+      "query_type": "context_sensitive",
+      "query": "I became quiet during a difficult conversation with a close friend, who felt that I was shutting them out.",
+      "evaluation": {
+        "status": "scored",
+        "recall": {
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "relevant_count": 1,
+        "uncertain_count": 0,
+        "original_ranking": [
+          "SYN-004",
+          "SYN-008",
+          "SYN-011",
+          "SYN-001",
+          "SYN-012",
+          "SYN-002",
+          "SYN-007",
+          "SYN-003",
+          "SYN-005",
+          "SYN-015",
+          "SYN-009",
+          "SYN-010",
+          "SYN-016",
+          "SYN-006",
+          "SYN-013",
+          "SYN-014"
+        ],
+        "assessable_ranking": [
+          "SYN-004",
+          "SYN-008",
+          "SYN-011",
+          "SYN-001",
+          "SYN-012",
+          "SYN-002",
+          "SYN-007",
+          "SYN-003",
+          "SYN-005",
+          "SYN-015",
+          "SYN-009",
+          "SYN-010",
+          "SYN-016",
+          "SYN-006",
+          "SYN-013",
+          "SYN-014"
+        ]
+      },
+      "retrieved": [
+        {
+          "record_id": "SYN-004",
+          "similarity_score": 0.6953621134549449,
+          "rank": 1
+        },
+        {
+          "record_id": "SYN-008",
+          "similarity_score": 0.5712169420977214,
+          "rank": 2
+        },
+        {
+          "record_id": "SYN-011",
+          "similarity_score": 0.5178032378700512,
+          "rank": 3
+        },
+        {
+          "record_id": "SYN-001",
+          "similarity_score": 0.4109155036733967,
+          "rank": 4
+        },
+        {
+          "record_id": "SYN-012",
+          "similarity_score": 0.37628893683606,
+          "rank": 5
+        },
+        {
+          "record_id": "SYN-002",
+          "similarity_score": 0.35107016102698557,
+          "rank": 6
+        },
+        {
+          "record_id": "SYN-007",
+          "similarity_score": 0.3446759427256137,
+          "rank": 7
+        },
+        {
+          "record_id": "SYN-003",
+          "similarity_score": 0.3428802591253514,
+          "rank": 8
+        },
+        {
+          "record_id": "SYN-005",
+          "similarity_score": 0.29630580739459417,
+          "rank": 9
+        },
+        {
+          "record_id": "SYN-015",
+          "similarity_score": 0.27252468233490873,
+          "rank": 10
+        },
+        {
+          "record_id": "SYN-009",
+          "similarity_score": 0.24874228128634235,
+          "rank": 11
+        },
+        {
+          "record_id": "SYN-010",
+          "similarity_score": 0.24178008674039067,
+          "rank": 12
+        },
+        {
+          "record_id": "SYN-016",
+          "similarity_score": 0.20746193691788598,
+          "rank": 13
+        },
+        {
+          "record_id": "SYN-006",
+          "similarity_score": 0.20345053561441104,
+          "rank": 14
+        },
+        {
+          "record_id": "SYN-013",
+          "similarity_score": 0.18436573247086163,
+          "rank": 15
+        },
+        {
+          "record_id": "SYN-014",
+          "similarity_score": 0.14368518126450192,
+          "rank": 16
+        }
+      ]
+    },
+    {
+      "query_id": "Q-011",
+      "query_type": "ambiguous",
+      "query": "Someone declined an invitation, but I don't know how the other person reacted or what their relationship was.",
+      "evaluation": {
+        "status": "unscorable",
+        "recall": null,
+        "reciprocal_rank": null,
+        "relevant_count": 0,
+        "uncertain_count": 2,
+        "original_ranking": [
+          "SYN-002",
+          "SYN-001",
+          "SYN-005",
+          "SYN-009",
+          "SYN-010",
+          "SYN-011",
+          "SYN-012",
+          "SYN-008",
+          "SYN-004",
+          "SYN-007",
+          "SYN-003",
+          "SYN-006",
+          "SYN-013",
+          "SYN-015",
+          "SYN-016",
+          "SYN-014"
+        ],
+        "assessable_ranking": [
+          "SYN-005",
+          "SYN-009",
+          "SYN-010",
+          "SYN-011",
+          "SYN-012",
+          "SYN-008",
+          "SYN-004",
+          "SYN-007",
+          "SYN-003",
+          "SYN-006",
+          "SYN-013",
+          "SYN-015",
+          "SYN-016",
+          "SYN-014"
+        ]
+      },
+      "retrieved": [
+        {
+          "record_id": "SYN-002",
+          "similarity_score": 0.6738357699276554,
+          "rank": 1
+        },
+        {
+          "record_id": "SYN-001",
+          "similarity_score": 0.56775201807028,
+          "rank": 2
+        },
+        {
+          "record_id": "SYN-005",
+          "similarity_score": 0.5102007433004526,
+          "rank": 3
+        },
+        {
+          "record_id": "SYN-009",
+          "similarity_score": 0.5075452514824771,
+          "rank": 4
+        },
+        {
+          "record_id": "SYN-010",
+          "similarity_score": 0.4467769107604138,
+          "rank": 5
+        },
+        {
+          "record_id": "SYN-011",
+          "similarity_score": 0.44502915414560756,
+          "rank": 6
+        },
+        {
+          "record_id": "SYN-012",
+          "similarity_score": 0.43573900343518646,
+          "rank": 7
+        },
+        {
+          "record_id": "SYN-008",
+          "similarity_score": 0.4329575104727417,
+          "rank": 8
+        },
+        {
+          "record_id": "SYN-004",
+          "similarity_score": 0.42480832638283206,
+          "rank": 9
+        },
+        {
+          "record_id": "SYN-007",
+          "similarity_score": 0.40669465317525216,
+          "rank": 10
+        },
+        {
+          "record_id": "SYN-003",
+          "similarity_score": 0.4047062943311633,
+          "rank": 11
+        },
+        {
+          "record_id": "SYN-006",
+          "similarity_score": 0.4027840361443098,
+          "rank": 12
+        },
+        {
+          "record_id": "SYN-013",
+          "similarity_score": 0.3109027929595662,
+          "rank": 13
+        },
+        {
+          "record_id": "SYN-015",
+          "similarity_score": 0.28993820362367967,
+          "rank": 14
+        },
+        {
+          "record_id": "SYN-016",
+          "similarity_score": 0.25511465722586124,
+          "rank": 15
+        },
+        {
+          "record_id": "SYN-014",
+          "similarity_score": 0.21839972053287943,
+          "rank": 16
+        }
+      ]
+    },
+    {
+      "query_id": "Q-012",
+      "query_type": "ambiguous",
+      "query": "Someone avoided looking directly at another person during a conversation, but I don't know why.",
+      "evaluation": {
+        "status": "unscorable",
+        "recall": null,
+        "reciprocal_rank": null,
+        "relevant_count": 0,
+        "uncertain_count": 2,
+        "original_ranking": [
+          "SYN-007",
+          "SYN-008",
+          "SYN-001",
+          "SYN-014",
+          "SYN-004",
+          "SYN-011",
+          "SYN-002",
+          "SYN-013",
+          "SYN-015",
+          "SYN-005",
+          "SYN-003",
+          "SYN-009",
+          "SYN-006",
+          "SYN-016",
+          "SYN-012",
+          "SYN-010"
+        ],
+        "assessable_ranking": [
+          "SYN-001",
+          "SYN-014",
+          "SYN-004",
+          "SYN-011",
+          "SYN-002",
+          "SYN-013",
+          "SYN-015",
+          "SYN-005",
+          "SYN-003",
+          "SYN-009",
+          "SYN-006",
+          "SYN-016",
+          "SYN-012",
+          "SYN-010"
+        ]
+      },
+      "retrieved": [
+        {
+          "record_id": "SYN-007",
+          "similarity_score": 0.5002593958123618,
+          "rank": 1
+        },
+        {
+          "record_id": "SYN-008",
+          "similarity_score": 0.4516009547278757,
+          "rank": 2
+        },
+        {
+          "record_id": "SYN-001",
+          "similarity_score": 0.34469785905305533,
+          "rank": 3
+        },
+        {
+          "record_id": "SYN-014",
+          "similarity_score": 0.3161905056786174,
+          "rank": 4
+        },
+        {
+          "record_id": "SYN-004",
+          "similarity_score": 0.31220668979718125,
+          "rank": 5
+        },
+        {
+          "record_id": "SYN-011",
+          "similarity_score": 0.3080926247946397,
+          "rank": 6
+        },
+        {
+          "record_id": "SYN-002",
+          "similarity_score": 0.26202306434420486,
+          "rank": 7
+        },
+        {
+          "record_id": "SYN-013",
+          "similarity_score": 0.2548887970048516,
+          "rank": 8
+        },
+        {
+          "record_id": "SYN-015",
+          "similarity_score": 0.2526288565515898,
+          "rank": 9
+        },
+        {
+          "record_id": "SYN-005",
+          "similarity_score": 0.223446123341466,
+          "rank": 10
+        },
+        {
+          "record_id": "SYN-003",
+          "similarity_score": 0.2214129411608231,
+          "rank": 11
+        },
+        {
+          "record_id": "SYN-009",
+          "similarity_score": 0.22013767044356702,
+          "rank": 12
+        },
+        {
+          "record_id": "SYN-006",
+          "similarity_score": 0.20944791893577852,
+          "rank": 13
+        },
+        {
+          "record_id": "SYN-016",
+          "similarity_score": 0.15695043255857472,
+          "rank": 14
+        },
+        {
+          "record_id": "SYN-012",
+          "similarity_score": 0.11509780166815053,
+          "rank": 15
+        },
+        {
+          "record_id": "SYN-010",
+          "similarity_score": 0.0921018546369191,
+          "rank": 16
+        }
+      ]
+    }
+  ]
+}
